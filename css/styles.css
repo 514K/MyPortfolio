@@ -1,0 +1,68 @@
+html {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+}
+
+body {
+    width: 60%;
+    align-items: center;
+    margin: auto;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.menu__item:first-child p {
+    border-right: 1px solid black;
+    border-left: none;
+}
+
+.menu__item:last-child p {
+    border-left: none;
+    border-right: none;
+}
+
+.menu__item p {
+    border-right: 1px solid black;
+    
+    margin: 20px 0px;
+    padding: 20px;
+}
+
+.menu__item {
+    text-decoration: none;
+    color: black;
+    transition: .5s all;
+}
+
+.menu__item:hover {
+    background-color: red;
+}
+
+.myproject {
+    border-radius: 30px;
+    border: none;
+    width: 35%;
+    height: 600px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.myprojects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.adult-content {
+    filter: blur(20px);
+}
+
+.adult-content:hover {
+    filter: none;
+}
