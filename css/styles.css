@@ -1,46 +1,44 @@
 html {
-    font-family: 'Open Sans',sans-serif;
-    font-size: 16px;
+    font-family: "GilroyRegular";
+    font-size: 20px;
 }
 
 body {
+    font-family: "GilroyRegular";
     width: 60%;
     align-items: center;
     margin: auto;
+    transition: .5s all;
+    color: rgb(6, 22, 56);
+    background: url(../images/code.jpg);
 }
 
 .menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 2px solid black;
-}
-
-.menu__item:first-child p {
-    border-right: 1px solid black;
-    border-left: none;
-}
-
-.menu__item:last-child p {
-    border-left: none;
-    border-right: none;
-}
-
-.menu__item p {
-    border-right: 1px solid black;
-    
-    margin: 20px 0px;
-    padding: 20px;
+    margin-top: 20px;
+    font-size: 16px;
 }
 
 .menu__item {
     text-decoration: none;
-    color: black;
+    padding: 0px 15px;
+    margin: 5px;
     transition: .5s all;
 }
 
+.menu__item {
+    border-radius: 10px;
+}
+
+.menu__item:visited {
+    color: rgb(6, 22, 56);
+}
+
 .menu__item:hover {
-    background-color: red;
+    background-color: rgba(0, 0, 0, 0.842);
+    color: white;
 }
 
 .myproject {
@@ -65,4 +63,51 @@ body {
 
 .adult-content:hover {
     filter: none;
+}
+
+.blur-block{
+    filter: blur(10px);
+    position: fixed;
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    background-color: white;
+    opacity: 0.9;
+    z-index: -1;
+    top: 0px;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 1550px) {
+    body {
+        width: 80%;
+    }
+
+    .myproject {
+        width: 40%;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu__item {
+        margin: 0;
+    }
+
+    .menu__item p, .menu__item:first-child p {
+        border: none;
+    }
+
+    .myproject {
+        width: 70%;
+    }
+}
+
+@font-face {
+    font-family: "GilroyRegular"; /* Гарнитура шрифта */
+    src: url(../fonts/Gilroy-Regular.ttf); /* Путь к файлу со шрифтом */
 }
